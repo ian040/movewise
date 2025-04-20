@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>MoveWise</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="card" id="auth">
+    <h2 id="auth-title">Login</h2>
+    <div class="form-control">
+      <label for="email">E-mail:</label>
+      <input type="email" id="email">
+    </div>
+    <div class="form-control">
+      <label for="password">Senha:</label>
+      <input type="password" id="password">
+    </div>
+    <button onclick="login()">Entrar</button>
+    <p>ou <a href="#" onclick="toggleAuth()">Criar conta</a></p>
+  </div>
+
+  <div class="card hidden" id="dashboard">
+    <h2>Agendamentos</h2>
+    <button onclick="logout()">Sair</button>
+    <form id="form-agendamento">
+      <div class="form-control">
+        <label>Data e Hora:</label>
+        <input type="datetime-local" id="dataHora">
+      </div>
+      <div class="form-control">
+        <label>Local de Embarque:</label>
+        <input type="text" id="embarque">
+      </div>
+      <div class="form-control">
+        <label>Local de Desembarque:</label>
+        <input type="text" id="desembarque">
+      </div>
+      <div class="form-control">
+        <label>Motorista:</label>
+        <input type="text" id="motorista">
+      </div>
+      <div class="form-control">
+        <label>Carro:</label>
+        <input type="text" id="carro">
+      </div>
+      <button type="submit">Salvar Agendamento</button>
+    </form>
+
+    <table id="tabela-agendamentos">
+      <thead>
+        <tr>
+          <th>Data e Hora</th>
+          <th>Embarque</th>
+          <th>Desembarque</th>
+          <th>Motorista</th>
+          <th>Carro</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
